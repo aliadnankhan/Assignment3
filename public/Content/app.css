@@ -1,1 +1,15 @@
 /* custom css goes here */
+
+html {
+    background-color: #21262b;
+}
+
+.title-section {
+    color: white;
+    background-color: #21262b;
+}
+
+.container {
+    background-color: #21262b;
+    color: white;
+}

@@ -1,0 +1,37 @@
+<% include ../partials/header.ejs %>
+<% include ../partials/main_nav.ejs %>
+
+<!-- Main content for displaying my database -->
+<main class="container">
+    <div class="row">
+        <div class="offset-md-1 col-md-10">
+            <h1><%= title %></h1>
+            <br>
+            <table class="table table-bordered table-stripped table-hover">
+            <!-- Header Row -->
+                <tr class="d-flex">
+                    <th class="text-center col-2">Name</th>
+                    <th class="text-center col-3">Description</th>
+                    <th class="text-center col-2">Duration</th>
+                    <th class="text-center col-1">Sets</th>
+                    <th class="text-center col-2">Reps</th>
+                    <th class="text-center col-2">Date</th>
+                </tr>
+                <!-- for/while loop -->
+                <% for(let count=0; count<WorkoutList.length; count++) { %>
+                    <tr class="d-flex">
+                        <td class="text-center col-2"><%= WorkoutList[count].name %></td>
+                        <td class="text-center col-3"><%= WorkoutList[count].description %></td>
+                        <td class="text-center col-2"><%= WorkoutList[count].duration %></td>
+                        <td class="text-center col-1"><%= WorkoutList[count].sets %></td>
+                        <td class="text-center col-2"><%= WorkoutList[count].reps %></td>
+                        <td class="text-center col-2"><%= WorkoutList[count].date %></td>
+                    </tr>
+                <% } %>
+            </table>
+        </div>
+    </div>
+</main>
+
+<% include ../partials/bottom_nav.ejs %>
+<% include ../partials/footer.ejs %>    

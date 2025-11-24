@@ -1,12 +1,14 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/Content/app.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Hello World</p>
-    <script src='/Scripts/app.js'></script>
-  </body>
-</html>
+<% include partials/header.ejs %>
+<% include partials/main_nav.ejs %>
+
+<!-- Main Content -->
+<main>
+  <div class= "title-section">
+    <img src="/Assets/images/workout.png" alt="Logo" style="width:100px;">
+    <h1>Welcome to Workout Tracker Website</h1>
+    <p>Your gateway to managing workouts effectively.</p>
+  </div>
+</main>
+
+<% include partials/bottom_nav.ejs %>
+<% include partials/footer.ejs %>
