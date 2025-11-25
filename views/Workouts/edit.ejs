@@ -12,42 +12,54 @@
                     <input type="text" class="form-control" 
                     id="nameTextField" 
                     placeholder="Enter Workout Title"
-                    name="name" required>
+                    name="name"
+                    value="<%= workout.name %>"
+                    required>
                 </div>
                 <div class="form-group">
                     <label for="descriptionTextField"> Description</label>
                     <input type="text" class="form-control" 
                     id="descriptionTextField" 
                     placeholder="Enter Description"
-                    name="description" required>
+                    name="description"
+                    value="<%= workout.description %>"
+                    required>
                 </div>
                 <div class="form-group">
                     <label for="durationTextField"> Duration</label>
                     <input type="text" class="form-control" 
                     id="durationTextField" 
                     placeholder="Enter Duration"
-                    name="duration" required>
+                    name="duration"
+                    value="<%= workout.duration %>"
+                    required>
                 </div>
                 <div class="form-group">
                     <label for="setsTextField"> Sets</label>
                     <input type="text" class="form-control" 
                     id="setsTextField" 
                     placeholder="Enter Sets"
-                    name="sets" required>
+                    name="sets"
+                    value="<%= workout.sets %>"
+                    required>
                 </div>
                 <div class="form-group">
                     <label for="repsTextField"> Reps</label>
                     <input type="text" class="form-control" 
                     id="repsTextField" 
                     placeholder="Enter Reps"
-                    name="reps" required>
+                    name="reps"
+                    value="<%= workout.reps %>"
+                    required>
                 </div>
                 <div class="form-group">
                     <label for="dateTextField"> Date</label>
                     <input type="date" class="form-control" 
                     id="dateTextField" 
                     placeholder="Enter Date"
-                    name="date" required>
+                    name="date"
+                    value="<%= workout.date.toISOString().substring(0, 10) %>"
+                    required>
                 </div>
                 <br>
                 <button class="btn btn-primary" type="submit">

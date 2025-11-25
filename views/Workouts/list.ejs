@@ -7,6 +7,10 @@
         <div class="offset-md-1 col-md-10">
             <h1><%= title %></h1>
             <br>
+            <a href="workout/add" class="btn btn-primary" role="button">
+                <i class="fas fa-plus-circle"></i> Add a Workout
+            </a>
+            <br>
             <table class="table table-bordered table-stripped table-hover">
             <!-- Header Row -->
                 <tr class="d-flex">
@@ -26,6 +30,19 @@
                         <td class="text-center col-1"><%= WorkoutList[count].sets %></td>
                         <td class="text-center col-2"><%= WorkoutList[count].reps %></td>
                         <td class="text-center col-2"><%= WorkoutList[count].date %></td>
+                        <td class="text-center col-1">
+                            <a href="/workout/edit/<%= WorkoutList[count]._id %>" 
+                            class="btn btn-primary btn-sm">
+                            <i class="fas fa-pencil-alt"></i> Edit
+                            </a>
+                        </td>
+                        <td class="text-center col-1">
+                            <a href="/workout/delete/<%= WorkoutList[count]._id %>" 
+                            class="btn btn-danger btn-sm"
+                            onclick="return confirm('Are you sure you want to delete this workout?');">
+                            <i class="fas fa-trash-alt"></i> Delete
+                            </a>
+                        </td>
                     </tr>
                 <% } %>
             </table>
